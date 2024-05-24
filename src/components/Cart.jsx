@@ -28,15 +28,15 @@ export default function Cart() {
                         name={item.name}
                         quantity={item.quantity}
                         price={item.price}
-                        onDecrease={() => cartCtx.addItem(item)}
-                        onIncrease={() => cartCtx.removeItem(item.id)}
+                        onIncrease={() => cartCtx.addItem(item)}
+                        onDecrease={() => cartCtx.removeItem(item.id)}
                     />
                 ))}
             </ul>
             <p className="cart-total">{currencyFormatter.format(cartTotal)}</p>
             <p className="modal-actions">
                 <Button textOnly onClick={handleCloseCart}>Close</Button>
-                <Button>Go to Checkout</Button>
+                {cartCtx.items.length > 0 && <Button>Go to Checkout</Button>}
             </p>
         </Modal>
     )
