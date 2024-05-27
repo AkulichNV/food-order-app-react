@@ -68,7 +68,7 @@ export default function Checkout() {
         actions = <span>Sending order data...</span>
     }
 
-    if (data && !error) {
+    if (data.message && !error) {
         return (
             <Modal 
                 open={userProgressCtx.progress === 'checkout'}
@@ -83,7 +83,7 @@ export default function Checkout() {
             </Modal>
         );
     }
-
+    
     return (
         <Modal 
             open={userProgressCtx.progress === 'checkout'}
