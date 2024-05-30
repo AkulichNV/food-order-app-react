@@ -11,3 +11,5 @@ This app used useEffect, useCallback and Custom HTTP hooks; Context and Reducer;
 Firstly, run `npm install` in terminal,
 
 then `npm run dev` to start development server
+
+To start the backend server, need to go to the backend folder `cd backend` and run `node app.js`
